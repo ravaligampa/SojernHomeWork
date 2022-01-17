@@ -34,7 +34,7 @@ class TestCases(unittest.TestCase):
     def test_failurecase_1(self):
         self.assertEqual(compareVersion("0.1", "1.0"), 1, "Should be -1")
     def test_failurecase_2(self):
-        self.assertEqual(compareVersion("0.1", "1.0"), 1, "Should be -1")
+        self.assertEqual(compareVersion("1.0", "0.1"), -1, "Should be 1")
     def test_failurecase_3(self):
         self.assertEqual(compareVersion("1.0", "1.0"), 1, "Should be 0")
     def test_failurecase_4(self):
