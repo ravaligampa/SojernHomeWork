@@ -1,0 +1,20 @@
+ curl -w "\n" -d '{ "list" : [] }' -H "Content-Type: application/json" -X GET http://localhost:5000/avg
+ curl -w "\n" -d '{ "list" : [1,2,3,4] }' -H "Content-Type: application/json" -X GET http://localhost:5000/avg
+ curl -w "\n" -d '{ "list" : [-1,-3,-5,-10] }' -H "Content-Type: application/json" -X GET http://localhost:5000/avg
+ curl -w "\n" -d '{ "list" : [3,2,4,1], "quantifier": 3 }' -H "Content-Type: application/json" -X GET http://localhost:5000/min
+ curl -w "\n" -d '{ "list" : [3,2,4,1], "quantifier": -3 }' -H "Content-Type: application/json" -X GET http://localhost:5000/min
+ curl -w "\n" -d '{ "list" : [0,0,0,0], "quantifier": 3 }' -H "Content-Type: application/json" -X GET http://localhost:5000/min
+ curl  -w "\n" -d '{ "list" : [20,2,7,1,34], "quantifier": 50 }' -H "Content-Type: application/json" -X GET http://localhost:5000/percentile
+ curl  -w "\n" -d '{ "list" : [20,2,7,1,34], "quantifier": 2 }' -H "Content-Type: application/json" -X GET http://localhost:5000/percentile
+ curl  -w "\n" -d '{ "list" : [20,2,7,1,34], "quantifier": 100 }' -H "Content-Type: application/json" -X GET http://localhost:5000/percentile
+ curl  -w "\n" -d '{ "list" : [20,2,7,1,34], "quantifier": 0 }' -H "Content-Type: application/json" -X GET http://localhost:5000/percentile
+ curl  -w "\n" -d '{ "list" : [3,2,4,1], "quantifier": 3 }' -H "Content-Type: application/json" -X GET http://localhost:5000/max
+ curl  -w "\n" -d '{ "list" : [3,3,3,3], "quantifier": 3 }' -H "Content-Type: application/json" -X GET http://localhost:5000/max
+ curl  -w "\n" -d '{ "list" : [3,3,3,3], "quantifier": -1 }' -H "Content-Type: application/json" -X GET http://localhost:5000/max
+ curl  -w "\n" -d '{ "list" : [3,5,8,10], "quantifier": 2 }' -H "Content-Type: application/json" -X GET http://localhost:5000/max
+ curl  -w "\n" -d '{ "list" : [], "quantifier": 3 }' -H "Content-Type: application/json" -X GET http://localhost:5000/max
+ curl -w "\n" -d '{ "list" : [1,1,2,4] }' -H "Content-Type: application/json" -X GET http://localhost:5000/median
+ curl -w "\n" -d '{ "list" : [] }' -H "Content-Type: application/json" -X GET http://localhost:5000/median
+ curl -w "\n" -d '{ "list" : [-5,-9,2,4] }' -H "Content-Type: application/json" -X GET http://localhost:5000/median
+ curl -w "\n" -d '{ "list" : [-10,-8,-5,-6] }' -H "Content-Type: application/json" -X GET http://localhost:5000/median
+
